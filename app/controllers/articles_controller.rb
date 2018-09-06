@@ -4,7 +4,9 @@ class ArticlesController < ApplicationController
     end
     def new
     end
-    
+    def edit
+        @article = Article.find(params[:id])
+    end
     def create
         # render plain: params[:article].
         @article = Article.new(article_params)
